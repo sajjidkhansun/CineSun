@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineSun — Watch Movies &amp; TV Shows Online</title>
+  <meta name="description" content="CineSun is a colourful, fast home for movies & TV shows — trending series, top-rated films, every genre, and instant streaming through verified players. No signup needed.">
+  <meta name="author" content="sunkhannnn">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#04120B">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CineSun">
+  <meta property="og:title" content="CineSun — Watch Movies &amp; TV Shows Online">
+  <meta property="og:description" content="A colourful, fast home for movies & TV shows. Trending series, top-rated films and every genre — stream instantly through verified players.">
+  <meta property="og:image" content="https://images.metahub.space/background/large/tt1375666/img">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CineSun — Watch Movies &amp; TV Shows Online">
+  <meta name="twitter:description" content="A colourful, fast home for movies & TV shows. Trending series, top-rated films and every genre — stream instantly through verified players.">
+  <meta name="twitter:image" content="https://images.metahub.space/background/large/tt1375666/img">
+
+  <link rel="icon" type="image/png" href="assets/logo-mark.png?v=42">
+  <link rel="apple-touch-icon" href="assets/logo-mark.png?v=42">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CineSun","alternateName":"CineSun streaming","description":"A colourful, fast home for movies and TV shows with instant streaming through verified players.","inLanguage":"en"}</script>
+
+  <!-- Inter font (from the internet, like cinejoy) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://v3-cinemeta.strem.io">
+  <link rel="preconnect" href="https://countapi.mileshilliard.com">
+  <link rel="preconnect" href="https://images.metahub.space">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Iconify icon library (all UI icons come from Remix set via CDN) -->
+  <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css?v=42">
+</head>
+<body>
+  <h1 class="visually-hidden">CineSun — Watch Movies &amp; TV Shows Online</h1>
+
+  <!-- Glass pill navbar (desktop) -->
+  <header class="topbar glass" id="topbar">
+    <span class="nav-btn logo-btn"><img class="logo-mark" src="assets/logo-mark.png?v=42" alt="" width="30" height="27"><span class="logo-txt">Cine<b>Sun</b></span></span>
+    <a class="nav-btn active" data-nav="home" href="#"><iconify-icon icon="ri:home-5-line"></iconify-icon><span class="nav-lbl">Home</span></a>
+    <a class="nav-btn" data-nav="movies" href="#"><iconify-icon icon="ri:movie-line"></iconify-icon><span class="nav-lbl">Movies</span></a>
+    <a class="nav-btn" data-nav="series" href="#"><iconify-icon icon="ri:tv-2-line"></iconify-icon><span class="nav-lbl">Series</span></a>
+    <a class="nav-btn" data-nav="anime" href="#"><iconify-icon icon="ri:sparkling-2-line"></iconify-icon><span class="nav-lbl">Anime</span></a>
+    <span class="nav-spacer"></span>
+    <div class="navSearch" id="navSearch">
+      <iconify-icon class="s-glass" icon="ri:search-line"></iconify-icon>
+      <input id="search" type="text" autocomplete="off" spellcheck="false" placeholder="Search 40,000+ movies &amp; series…" aria-label="Search">
+      <button id="clearSearch" class="s-clear" aria-label="Clear" hidden><iconify-icon icon="ri:close-line"></iconify-icon></button>
+    </div>
+    <button class="icon-btn" id="searchBtn" aria-label="Search"><iconify-icon icon="ri:search-line"></iconify-icon></button>
+    <button class="icon-btn" id="randomBtn" aria-label="Random pick"><iconify-icon icon="ri:dice-5-line"></iconify-icon></button>
+  </header>
+
+  <!-- Mobile dock -->
+  <nav class="dock glass" id="dock">
+    <a class="dock-btn nav-btn active" data-nav="home" href="#"><iconify-icon icon="ri:home-5-line"></iconify-icon><i>Home</i></a>
+    <a class="dock-btn nav-btn" data-nav="movies" href="#"><iconify-icon icon="ri:movie-line"></iconify-icon><i>Movies</i></a>
+    <a class="dock-btn nav-btn" data-nav="series" href="#"><iconify-icon icon="ri:tv-2-line"></iconify-icon><i>Series</i></a>
+    <a class="dock-btn nav-btn" data-nav="anime" href="#"><iconify-icon icon="ri:sparkling-2-line"></iconify-icon><i>Anime</i></a>
+    <button class="dock-btn" id="searchBtn2" aria-label="Search"><iconify-icon icon="ri:search-line"></iconify-icon><i>Search</i></button>
+    <button class="dock-btn" id="randomBtn2" aria-label="Random pick"><iconify-icon icon="ri:dice-5-line"></iconify-icon><i>Pick</i></button>
+  </nav>
+
+  <!-- Full-bleed hero carousel -->
+  <section id="hero" aria-label="Featured"></section>
+
+  <!-- Rows -->
+  <main id="rows"></main>
+
+  <footer class="site-footer px">
+    <span class="nav-btn logo-btn footer-logo"><img class="logo-full" src="assets/logo-full.png?v=42" alt="CineSun" width="136" height="84"></span>
+    <p>One colourful home for movies &amp; series. Playback &amp; rights belong to the platforms shown above.</p>
+    <p class="credit">Developed by
+      <a class="ig" href="https://instagram.com/sunkhannnn" target="_blank" rel="noopener" title="Developer on Instagram"><iconify-icon icon="ri:instagram-line"></iconify-icon>@sunkhannnn</a>
+      <span class="sep">·</span> © 2026 CineSun</p>
+    <p class="visits" id="visitCounter" hidden><iconify-icon icon="ri:eye-line"></iconify-icon><span class="visit-count">–</span><span>lifetime visits</span></p>
+  </footer>
+
+  <!-- Details modal -->
+  <div id="modal" class="modal" hidden>
+    <div class="modal-sheet" role="dialog" aria-modal="true">
+      <button class="modal-close" id="modalClose" aria-label="Close"><iconify-icon icon="ri:close-line"></iconify-icon></button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js?v=42"></script>
+  <script src="js/posters.js?v=42"></script>
+  <script src="js/app.js?v=42"></script>
+</body>
+</html>
